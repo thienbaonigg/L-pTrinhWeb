@@ -1,0 +1,204 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    /* Header Styles */
+    .header {
+        background: #333;
+        color: white;
+        padding: 10px 0;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .logo {
+        float: left;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav ul {
+        list-style: none;
+        float: right;
+    }
+
+        .nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+            .nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+                .nav ul li a:hover {
+                    text-decoration: underline;
+                }
+
+    /* Hero Section */
+    .hero {
+        background: #f4f4f4;
+        color: #333;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+        .hero h2 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    /* Blog Section */
+    .blog-section {
+        padding: 40px 0;
+        background: #fff;
+    }
+
+        .blog-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+    .blog-post {
+        margin-bottom: 30px;
+    }
+
+        .blog-post h3 {
+            color: #333;
+        }
+
+        .blog-post p {
+            color: #777;
+        }
+
+    .read-more {
+        color: #0066cc;
+        text-decoration: none;
+    }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+    /* About Section */
+    .about {
+        padding: 40px 0;
+        background: #f4f4f4;
+    }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            text-align: center;
+            color: #555;
+        }
+
+    /* Footer Section */
+    .footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+        .footer p {
+            margin: 0;
+        }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modern Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">My Modern Blog</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Welcome to My Blog</h2>
+            <p>Your source for the latest trends, tips, and stories.</p>
+        </div>
+    </section>
+
+    <!-- Blog Post Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <h2>Latest Blog Posts</h2>
+
+            <article class="blog-post">
+                <h3>Post Title 1</h3>
+                <p>Published on October 12, 2024 | by Author Name</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel ligula scelerisque, feugiat nisl sit amet, suscipit tortor.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h3>Post Title 2</h3>
+                <p>Published on October 10, 2024 | by Author Name</p>
+                <p>Sed non ante at quam ultrices vehicula. Nulla facilisi. Nulla quis lorem neque. Praesent at quam vehicula, luctus nulla ac, dapibus orci.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name], a blogger passionate about sharing insights on fashion, tech, and lifestyle. Follow along for tips and inspiration!</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p>Contact: yourname@example.com | Follow me on social media</p>
+        </div>
+    </footer>
+</body>
+</html>
+

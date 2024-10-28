@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{145060D3-473B-4D4C-80A4-50F8B612657E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BanHang</RootNamespace>
+    <AssemblyName>BanHang</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\css\productStyle.css" />
+    <Content Include="Content\assets\css\style-prefix.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\images\banner-1.jpg" />
+    <Content Include="Content\assets\images\banner-2.jpg" />
+    <Content Include="Content\assets\images\banner-3.jpg" />
+    <Content Include="Content\assets\images\Bao.jpg" />
+    <Content Include="Content\assets\images\blog-1.jpg" />
+    <Content Include="Content\assets\images\blog-2.jpg" />
+    <Content Include="Content\assets\images\blog-3.jpg" />
+    <Content Include="Content\assets\images\blog-4.jpg" />
+    <Content Include="Content\assets\images\cta-banner.jpg" />
+    <Content Include="Content\assets\images\electronics-banner-1.jpg" />
+    <Content Include="Content\assets\images\electronics-banner-2.jpg" />
+    <Content Include="Content\assets\images\icons\bag.svg" />
+    <Content Include="Content\assets\images\icons\coat.svg" />
+    <Content Include="Content\assets\images\icons\cosmetics.svg" />
+    <Content Include="Content\assets\images\icons\dress.svg" />
+    <Content Include="Content\assets\images\icons\glasses.svg" />
+    <Content Include="Content\assets\images\icons\hat.svg" />
+    <Content Include="Content\assets\images\icons\jacket.svg" />
+    <Content Include="Content\assets\images\icons\jewelry.svg" />
+    <Content Include="Content\assets\images\icons\perfume.svg" />
+    <Content Include="Content\assets\images\icons\quotes.svg" />
+    <Content Include="Content\assets\images\icons\shoes.svg" />
+    <Content Include="Content\assets\images\icons\shorts.svg" />
+    <Content Include="Content\assets\images\icons\tee.svg" />
+    <Content Include="Content\assets\images\icons\watch.svg" />
+    <Content Include="Content\assets\images\logo\istockphoto-1135090585-612x612.jpg" />
+    <Content Include="Content\assets\images\logo\that-time-i-got-reincarnated-as-a-slime-season-4_syzb %282%29.jpg" />
+    <Content Include="Content\assets\images\mens-banner.jpg" />
+    <Content Include="Content\assets\images\newsletter.png" />
+    <Content Include="Content\assets\images\payment.png" />
+    <Content Include="Content\assets\images\Phan.jpg" />
+    <Content Include="Content\assets\images\products\1.png" />
+    <Content Include="Content\assets\images\products\2.png" />
+    <Content Include="Content\assets\images\products\3.png" />
+    <Content Include="Content\assets\images\products\4.png" />
+    <Content Include="Content\assets\images\products\air_freshener.png" />
+    <Content Include="Content\assets\images\products\bag.png" />
+    <Content Include="Content\assets\images\products\belt.png" />
+    <Content Include="Content\assets\images\products\blog.png" />
+    <Content Include="Content\assets\images\products\bracelet.png" />
+    <Content Include="Content\assets\images\products\camera.png" />
+    <Content Include="Content\assets\images\products\casual_men.png" />
+    <Content Include="Content\assets\images\products\clothes-1.png" />
+    <Content Include="Content\assets\images\products\clothes-2.png" />
+    <Content Include="Content\assets\images\products\clothes-3.png" />
+    <Content Include="Content\assets\images\products\clothes-4.png" />
+    <Content Include="Content\assets\images\products\clothes_perfumes.png" />
+    <Content Include="Content\assets\images\products\deodorant.png" />
+    <Content Include="Content\assets\images\products\desktop %282%29.png" />
+    <Content Include="Content\assets\images\products\desktop.png" />
+    <Content Include="Content\assets\images\products\dress.png" />
+    <Content Include="Content\assets\images\products\earrings.png" />
+    <Content Include="Content\assets\images\products\flower_fragance.png" />
+    <Content Include="Content\assets\images\products\frock.png" />
+    <Content Include="Content\assets\images\products\headphone %282%29.png" />
+    <Content Include="Content\assets\images\products\headphone.png" />
+    <Content Include="Content\assets\images\products\jacket-1.png" />
+    <Content Include="Content\assets\images\products\jacket-2.png" />
+    <Content Include="Content\assets\images\products\jacket-3.png" />
+    <Content Include="Content\assets\images\products\jacket-4.png" />
+    <Content Include="Content\assets\images\products\jacket-5.png" />
+    <Content Include="Content\assets\images\products\jacket-6.png" />
+    <Content Include="Content\assets\images\products\jeans for men.png" />
+    <Content Include="Content\assets\images\products\jewellery-1.png" />
+    <Content Include="Content\assets\images\products\jewellery-2.png" />
+    <Content Include="Content\assets\images\products\jewellery-3.png" />
+    <Content Include="Content\assets\images\products\keyboard %282%29.png" />
+    <Content Include="Content\assets\images\products\keyboard.png" />
+    <Content Include="Content\assets\images\products\laptop %282%29.png" />
+    <Content Include="Content\assets\images\products\laptop.png" />
+    <Content Include="Content\assets\images\products\leather_bag.png" />
+    <Content Include="Content\assets\images\products\makeup_kit.png" />
+    <Content Include="Content\assets\images\products\microphone.png" />
+    <Content Include="Content\assets\images\products\mouse %282%29.png" />
+    <Content Include="Content\assets\images\products\mouse.png" />
+    <Content Include="Content\assets\images\products\necklace.png" />
+    <Content Include="Content\assets\images\products\party-wear-1.png" />
+    <Content Include="Content\assets\images\products\party-wear-2.png" />
+    <Content Include="Content\assets\images\products\perfume.png" />
+    <Content Include="Content\assets\images\products\rings.png" />
+    <Content Include="Content\assets\images\products\shampoo.png" />
+    <Content Include="Content\assets\images\products\shirt-1.png" />
+    <Content Include="Content\assets\images\products\shirt-2.png" />
+    <Content Include="Content\assets\images\products\shoe-1.png" />
+    <Content Include="Content\assets\images\products\shoe-1_1.png" />
+    <Content Include="Content\assets\images\products\shoe-2.png" />
+    <Content Include="Content\assets\images\products\shoe-2_1.png" />
+    <Content Include="Content\assets\images\products\shoe-3.png" />
+    <Content Include="Content\assets\images\products\shoe-4.png" />
+    <Content Include="Content\assets\images\products\shoe-5.png" />
+    <Content Include="Content\assets\images\products\shorts for men.png" />
+    <Content Include="Content\assets\images\products\shorts-1.png" />
+    <Content Include="Content\assets\images\products\shorts-2.png" />
+    <Content Include="Content\assets\images\products\smartwatch.png" />
+    <Content Include="Content\assets\images\products\smart_tv.png" />
+    <Content Include="Content\assets\images\products\sneaker.png" />
+    <Content Include="Content\assets\images\products\sports-1.png" />
+    <Content Include="Content\assets\images\products\sports-2.png" />
+    <Content Include="Content\assets\images\products\sports-3.png" />
+    <Content Include="Content\assets\images\products\sports-4.png" />
+    <Content Include="Content\assets\images\products\sports-5.png" />
+    <Content Include="Content\assets\images\products\sports-6.png" />
+    <Content Include="Content\assets\images\products\sunglasses.png" />
+    <Content Include="Content\assets\images\products\tablet.png" />
+    <Content Include="Content\assets\images\products\wallet.png" />
+    <Content Include="Content\assets\images\products\watch-1.png" />
+    <Content Include="Content\assets\images\products\watch-2.png" />
+    <Content Include="Content\assets\images\products\watch-3.png" />
+    <Content Include="Content\assets\images\products\watch-4.png" />
+    <Content Include="Content\assets\images\Quan.jpg" />
+    <Content Include="Content\assets\images\testimonial-1.jpg" />
+    <Content Include="Content\assets\images\Truong.jpg" />
+    <Content Include="Content\assets\images\washing-machine-heart-tiktok-remix-lyrics.mp3" />
+    <Content Include="Content\assets\images\womens-banner.jpg" />
+    <Content Include="Content\assets\images\z2841029257198_25fa1d1b6a7e7c22383aa980eaf71af5.jpg" />
+    <Content Include="Content\assets\js\script.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Shared\_MasterLayout.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Home\Blog_page.cshtml" />
+    <Content Include="Views\Home\Electronics.cshtml" />
+    <Content Include="Views\Home\Air_Freshener.cshtml" />
+    <Content Include="Views\Home\Bracelets.cshtml" />
+    <Content Include="Views\Home\Camera.cshtml" />
+    <Content Include="Views\Home\Causual_Women.cshtml" />
+    <Content Include="Views\Home\Casual_Men.cshtml" />
+    <Content Include="Views\Home\Clothes_Perfumes.cshtml" />
+    <Content Include="Views\Home\Couple_Rings.cshtml" />
+    <Content Include="Views\Home\Deodorant.cshtml" />
+    <Content Include="Views\Home\Desktop.cshtml" />
+    <Content Include="Views\Home\Dress.cshtml" />
+    <Content Include="Views\Home\Earrings.cshtml" />
+    <Content Include="Views\Home\FavList.cshtml" />
+    <Content Include="Views\Home\Flower_Fragrances.cshtml" />
+    <Content Include="Views\Home\Formal_Men.cshtml" />
+    <Content Include="Views\Home\Formal_Women.cshtml" />
+    <Content Include="Views\Home\Headphone.cshtml" />
+    <Content Include="Views\Home\Hot_Offers.cshtml" />
+    <Content Include="Views\Home\Jacket_Men.cshtml" />
+    <Content Include="Views\Home\Jewelry.cshtml" />
+    <Content Include="Views\Home\Keyboard.cshtml" />
+    <Content Include="Views\Home\Laptop.cshtml" />
+    <Content Include="Views\Home\Makeup_Kit.cshtml" />
+    <Content Include="Views\Home\Men.cshtml" />
+    <Content Include="Views\Home\Microphone.cshtml" />
+    <Content Include="Views\Home\Mouse.cshtml" />
+    <Content Include="Views\Home\Necklace.cshtml" />
+    <Content Include="Views\Home\OrderManage.cshtml" />
+    <Content Include="Views\Home\Pants.cshtml" />
+    <Content Include="Views\Home\PasswordReset.cshtml" />
+    <Content Include="Views\Home\Perfumes.cshtml" />
+    <Content Include="Views\Home\Profile_Page.cshtml" />
+    <Content Include="Views\Home\ProfileEdit.cshtml" />
+    <Content Include="Views\Home\ProfileLogin.cshtml" />
+    <Content Include="Views\Home\Safety_Shoes.cshtml" />
+    <Content Include="Views\Home\Shirts.cshtml" />
+    <Content Include="Views\Home\Smart_TV.cshtml" />
+    <Content Include="Views\Home\Smart_Watch.cshtml" />
+    <Content Include="Views\Home\Sport_Men.cshtml" />
+    <Content Include="Views\Home\Sunglasses_Men.cshtml" />
+    <Content Include="Views\Home\Tablet.cshtml" />
+    <Content Include="Views\Home\Wallet.cshtml" />
+    <Content Include="Views\Home\Women.cshtml" />
+    <Content Include="Views\Home\Bags.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50052</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50052/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

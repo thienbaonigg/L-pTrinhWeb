@@ -1,0 +1,208 @@
+﻿@{
+    Layout = null;
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile | Fashion Store</title>
+
+    <!-- Link to the base CSS -->
+    <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8; /* New muted background color */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        button {
+            align-items: end;
+        }
+
+        /* Profile Header Section */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffffff, #e6eef3); /* Softer pastel gradient */
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+            .profile-header img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 30px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                border: 5px solid #fff;
+            }
+
+            .profile-header .info h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                color: #ff6f61;
+            }
+
+            .profile-header .info p {
+                font-size: 1.1rem;
+                color: #666;
+            }
+
+        .edit-profile {
+            margin-left: auto;
+            background-color: #ff6f61;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+            .edit-profile:hover {
+                background-color: #ff9966;
+            }
+
+        /* Profile Details Section */
+        .profile-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .details-card {
+            background-color: #fafafa;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+            .details-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .details-card h3 {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+                color: #ff6f61;
+            }
+
+            .details-card p {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+                color: #555;
+            }
+
+            /* Icons or Progress Circle */
+            .details-card .icon {
+                width: 50px;
+                height: 50px;
+                background-color: #ff6f61;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 1.5rem;
+                position: absolute;
+                top: -25px;
+                left: 25px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            }
+
+        /* Action Buttons */
+        .actions {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+            .actions button {
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: #4caf50;
+                color: #fff;
+                font-size: 1rem;
+                transition: background-color 0.3s ease;
+            }
+
+                .actions button:hover {
+                    background-color: #388e3c;
+                }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="javascript:history.back()" class="back-btn">&larr; Back</a>
+        <h1>Your Profile</h1>
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="~/Content/assets/images/z2841029257198_25fa1d1b6a7e7c22383aa980eaf71af5.jpg" alt="Profile Picture">
+            <div class="info">
+                <h2>Louis PaoL</h2>
+                <p>Email: LouisPaoL@example.com</p>
+                <p>Member since: January 2024</p>
+            </div>
+            <button class="edit-profile"><a href="profileEdit.html" class="edit-profile">Edit Profile</a></button>
+        </div>
+
+        <!-- Profile Details -->
+        <div class="profile-details">
+            <!-- Personal Information -->
+            <div class="details-card">
+                <div class="icon">👤</div>
+                <h3>Personal Information</h3>
+                <p><strong>Full Name:</strong> Louis PaoL</p>
+                <p><strong>Email:</strong> LouisPaoL@example.com</p>
+                <p><strong>Phone:</strong> (123) 456-7890</p>
+                <p><strong>Address:</strong> 123 Random St., Random City</p>
+            </div>
+
+            <!-- Order History -->
+            <div class="details-card">
+                <div class="icon">📦</div>
+                <h3>Order History</h3>
+                <p><strong>Recent Order:</strong> #10023 - $250.00</p>
+                <p><strong>Order Date:</strong> February 10, 2024</p>
+                <p><strong>Status:</strong> Delivered</p>
+                <div class="actions">
+                    <a href="orderManage.html"><button>View All Orders</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+

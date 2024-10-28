@@ -1,0 +1,182 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .favorite-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            /* Product Image */
+            .product-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .product-card:hover img {
+                transform: scale(1.05);
+            }
+
+            /* Product Labels */
+            .product-card .label {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                background-color: #ff6f61;
+                color: #fff;
+                padding: 5px 10px;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                border-radius: 20px;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Product Name and Price */
+            .product-card h3 {
+                font-size: 1.3rem;
+                margin: 20px 0 10px;
+                color: #444;
+            }
+
+            .product-card .price {
+                font-size: 1.2rem;
+                color: #ff6f61;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+        /* Action Buttons */
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+            .actions button {
+                padding: 10px 18px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+        .view-btn {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .remove-btn {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .actions button:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div style="position: relative;">
+            <a href="../Home/HomePage" class="back-btn">Back</a>
+            <div class="container">
+                <h1>Your Favorite Products</h1>
+
+                <div class="favorite-grid">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="~/Content/assets/images/products/dress.png"  alt="Product 1">
+                        <h3>Elegant Dress</h3>
+                        <p class="price">$75.00</p>
+                        <div class="actions">
+                            <a href="dress.html"><button class="view-btn">View</button></a>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="~/Content/assets/images/products/leather_bag.png"  alt="Product 2">
+                        <h3>Classic Leather Bag</h3>
+                        <p class="price">$220.00</p>
+                        <div class="actions">
+                            <button class="view-btn">View</button>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="~/Content/assets/images/products/sneaker.png" alt="Product 3">
+                        <h3>Stylish Sneakers</h3>
+                        <p class="price">$89.00</p>
+                        <div class="actions">
+                            <button class="view-btn">View</button>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="~/Content/assets/images/products/earrings.png" alt="Product 4">
+                        <h3>Elegant Earrings</h3>
+                        <p class="price">$150.00</p>
+                        <div class="actions">
+                            <a href="earrings.html"><button class="view-btn">View</button></a>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                    <!-- Add more products as needed -->
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

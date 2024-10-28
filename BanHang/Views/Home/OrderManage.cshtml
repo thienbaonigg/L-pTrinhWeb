@@ -1,0 +1,173 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<head>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #444;
+        }
+
+        .order-management {
+            margin-top: 20px;
+        }
+
+        .order-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .order-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            }
+
+        .order-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+            .order-header h2 {
+                font-size: 1.4rem;
+                color: #333;
+            }
+
+            .order-header span {
+                font-size: 1.1rem;
+                color: #888;
+            }
+
+        .order-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+            .order-details div {
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+        .order-status {
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .status.pending {
+            color: #ff9800;
+        }
+
+        .status.canceled {
+            color: #f44336;
+        }
+
+        .actions {
+            text-align: right;
+        }
+
+            .actions button {
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+        .view-btn {
+            background-color: #4caf50;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .reorder-btn {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+
+        .actions button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="../Home/HomePage" class="back-btn">&larr; Back</a>
+        <h1>Order History</h1>
+
+        <!-- Order Management Section -->
+        <div class="order-management">
+            <!-- Order Card -->
+            <div class="order-card">
+                <div class="order-header">
+                    <h2>Order #12345</h2>
+                    <span>March 10, 2024</span>
+                </div>
+
+                <div class="order-details">
+                    <div>
+                        <strong>Total:</strong> $350.00
+                    </div>
+                    <div>
+                        <strong>Status:</strong> <span class="order-status status pending">Pending</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="view-btn">View Details</button>
+                    <button class="reorder-btn">Re-order</button>
+                </div>
+            </div>
+
+            <!-- Add more order cards as needed -->
+            <div class="order-card">
+                <div class="order-header">
+                    <h2>Order #12346</h2>
+                    <span>February 28, 2024</span>
+                </div>
+
+                <div class="order-details">
+                    <div>
+                        <strong>Total:</strong> $180.00
+                    </div>
+                    <div>
+                        <strong>Status:</strong> <span class="order-status status canceled">Canceled</span>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="view-btn">View Details</button>
+                    <button class="reorder-btn">Re-order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
