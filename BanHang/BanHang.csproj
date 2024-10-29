@@ -170,7 +170,6 @@
   <ItemGroup>
     <Content Include="Content\assets\css\productStyle.css" />
     <Content Include="Content\assets\css\style-prefix.css" />
-    <Content Include="Content\assets\css\style.css" />
     <Content Include="Content\assets\images\banner-1.jpg" />
     <Content Include="Content\assets\images\banner-2.jpg" />
     <Content Include="Content\assets\images\banner-3.jpg" />
