@@ -1,130 +1,112 @@
 ﻿<style>
-  /* Centering the login form */
-  .login-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh; /* Full height of the viewport */
-      background: linear-gradient(135deg, var(--salmon-pink), var(--sandy-brown));
-  }
+    .login-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #fa8072, #f4a460);
+    }
 
-  .login-box {
-      background-color: var(--white);
-      padding: 40px;
-      border-radius: var(--border-radius-md);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-      max-width: 400px;
-      width: 100%;
-      text-align: center;
-      animation: fadeIn 0.8s ease-in-out;
-  }
+    .login-box {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-  keyframes fadeIn {
-      from {
-          opacity: 0;
-          transform: translateY(-20px);
-      }
-      to {
-          opacity: 1;
-          transform: translateY(0);
-      }
-  }
+        .login-box h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
 
-  .login-box h2 {
-      margin-bottom: 20px;
-      font-size: var(--fs-3);
-      color: var(--eerie-black);
-      background: linear-gradient(90deg, var(--salmon-pink), var(--ocean-green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-  }
 
-  .input-group {
-      margin-bottom: 25px;
-      text-align: left;
-      position: relative;
-  }
+    .input-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
 
-  .input-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: var(--weight-500);
-      color: var(--onyx);
-  }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
 
-  .input-group input {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--cultured);
-      border-radius: var(--border-radius-sm);
-      background-color: var(--cultured);
-      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
-  }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
 
-  .input-group input:focus {
-      background-color: var(--white);
-      border-color: var(--salmon-pink);
-      outline: none;
-  }
+            .input-group input:focus {
+                background-color: #fff;
+                border-color: #fa8072;
+                outline: none;
+            }
 
-  .actions {
-      margin-top: 30px;
-  }
+    .actions {
+        margin-top: 25px;
+    }
 
-  .actions button {
-      width: 100%;
-      padding: 12px;
-      background: linear-gradient(135deg, var(--salmon-pink), var(--sandy-brown));
-      color: var(--white);
-      font-weight: var(--weight-600);
-      text-transform: uppercase;
-      border: none;
-      border-radius: var(--border-radius-md);
-      cursor: pointer;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
+        .actions button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #fa8072, #f4a460);
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
 
-  .actions button:hover {
-      background-color: var(--ocean-green);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
+            .actions button:hover {
+                background-color: #3cb371;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+            }
 
-  .actions p {
-      margin-top: 15px;
-  }
+        .actions p {
+            margin-top: 15px;
+        }
 
-  .actions a {
-      color: var(--onyx);
-      text-decoration: none;
-      transition: color 0.3s ease;
-  }
+        .actions a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-  .actions a:hover {
-      color: var(--salmon-pink);
-  }
+            .actions a:hover {
+                color: #fa8072;
+            }
 
-  /* Adding decorative elements */
-  .decorative-circle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-  }
+    .decorative-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+    }
 
-  .circle-1 {
-      width: 150px;
-      height: 150px;
-      top: -50px;
-      left: -50px;
-  }
+    .circle-1 {
+        width: 120px;
+        height: 120px;
+        top: -30px;
+        left: -30px;
+    }
 
-  .circle-2 {
-      width: 100px;
-      height: 100px;
-      bottom: -30px;
-      right: -30px;
-  }
+    .circle-2 {
+        width: 90px;
+        height: 90px;
+        bottom: -20px;
+        right: -20px;
+    }
 </style>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -215,12 +197,9 @@
     </header>
 
     <main>
-        <a href="javascript:history.back()" class="back-btn" style="margin: 2.5rem 1.5rem;">&larr; Back</a>
+        <a href="../Home/HomePage" class="back-btn" style="margin: 2.5rem 1.5rem;">&larr; Back</a>
         <section class="login-section">
             <div class="login-box">
-                <div class="decorative-circle circle-1"></div>
-                <div class="decorative-circle circle-2"></div>
-
                 <h2>Login to Your Account</h2>
                 <form action="https://www.google.com/" method="post">
                     <div class="input-group">
@@ -235,7 +214,7 @@
 
                     <div class="actions">
                         <button type="submit" class="btn-submit">Login</button>
-                        <p><a href="passwordReset.html">Forgot Password?</a></p>
+                        <p><a href="../Home/PasswordReset">Forgot Password?</a></p>
                     </div>
                 </form>
             </div>
