@@ -1,26 +1,3 @@
-'use strict';
-
-// Mobile Menu Variables
-const mobileMenuOpenBtn = document.querySelector('[data-mobile-menu-open-btn]');
-const mobileMenu = document.querySelector('[data-mobile-menu]');
-const mobileMenuCloseBtn = document.querySelector('[data-mobile-menu-close-btn]');
-const overlay = document.querySelector('[data-overlay]');
-
-// Mobile Menu Functions
-mobileMenuOpenBtn.addEventListener('click', function () {
-  mobileMenu.classList.add('active');
-  overlay.classList.add('active');
-});
-
-mobileMenuCloseBtn.addEventListener('click', function () {
-  mobileMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
-
-overlay.addEventListener('click', function () {
-  mobileMenu.classList.remove('active');
-  overlay.classList.remove('active');
-});
 
 // Modal Variables
 const modal = document.querySelector('[data-modal]');
@@ -106,3 +83,4 @@ document.querySelectorAll('[data-view-details]').forEach((button) => {
     modal.classList.remove('closed');
   });
 });
+

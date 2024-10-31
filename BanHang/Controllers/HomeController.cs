@@ -178,6 +178,10 @@ namespace BanHang.Controllers
         {
             return View();
         }
+        public ActionResult Shampoo()
+        {
+            return View();
+        }
         public ActionResult Shirts()
         {
             return View();
@@ -195,6 +199,10 @@ namespace BanHang.Controllers
             return View();
         }
         public ActionResult Sunglasses_Men()
+        {
+            return View();
+        }
+        public ActionResult Sunscreen()
         {
             return View();
         }

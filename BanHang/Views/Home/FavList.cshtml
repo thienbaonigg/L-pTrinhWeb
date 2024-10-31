@@ -132,23 +132,23 @@
                 <div class="favorite-grid">
                     <!-- Product Card 1 -->
                     <div class="product-card">
-                        <img src="~/Content/assets/images/products/dress.png"  alt="Product 1">
+                        <img src="~/Content/assets/images/products/dress.png" alt="Product 1">
                         <h3>Elegant Dress</h3>
                         <p class="price">$75.00</p>
                         <div class="actions">
-                            <a href="dress.html"><button class="view-btn">View</button></a>
-                            <button class="remove-btn">Remove</button>
+                            <a href="../Home/Dress"><button class="view-btn">View</button></a>
+                            <button class="remove-btn" onclick="removeProduct(this)">Remove</button>
                         </div>
                     </div>
 
                     <!-- Product Card 2 -->
                     <div class="product-card">
-                        <img src="~/Content/assets/images/products/leather_bag.png"  alt="Product 2">
+                        <img src="~/Content/assets/images/products/leather_bag.png" alt="Product 2">
                         <h3>Classic Leather Bag</h3>
                         <p class="price">$220.00</p>
                         <div class="actions">
-                            <button class="view-btn">View</button>
-                            <button class="remove-btn">Remove</button>
+                            <a href="../Home/Bags"><button class="view-btn">View</button></a>
+                            <button class="remove-btn" onclick="removeProduct(this)">Remove</button>
                         </div>
                     </div>
 
@@ -158,8 +158,8 @@
                         <h3>Stylish Sneakers</h3>
                         <p class="price">$89.00</p>
                         <div class="actions">
-                            <button class="view-btn">View</button>
-                            <button class="remove-btn">Remove</button>
+                            <a href="../Home/Safety_Shoes"><button class="view-btn">View</button></a>
+                            <button class="remove-btn" onclick="removeProduct(this)">Remove</button>
                         </div>
                     </div>
 
@@ -169,14 +169,20 @@
                         <h3>Elegant Earrings</h3>
                         <p class="price">$150.00</p>
                         <div class="actions">
-                            <a href="earrings.html"><button class="view-btn">View</button></a>
-                            <button class="remove-btn">Remove</button>
+                            <a href="../Home/Earrings"><button class="view-btn">View</button></a>
+                            <button class="remove-btn" onclick="removeProduct(this)">Remove</button>
                         </div>
                     </div>
-
-                    <!-- Add more products as needed -->
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        // Function to remove product card
+        function removeProduct(button) {
+            const productCard = button.closest('.product-card');
+            productCard.remove();
+        }
+    </script>
 </body>
