@@ -115,6 +115,51 @@
         .actions button:hover {
             opacity: 0.9;
         }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+            .modal.active {
+                display: flex;
+            }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+            .modal-content h2 {
+                margin-bottom: 15px;
+            }
+
+        .close-btn {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+            .close-btn:hover {
+                opacity: 0.9;
+            }
     </style>
 </head>
 
@@ -125,8 +170,8 @@
 
         <!-- Order Management Section -->
         <div class="order-management">
-            <!-- Order Card -->
-            <div class="order-card">
+            <!-- Order Card 1 -->
+            <div class="order-card" data-order-id="12345">
                 <div class="order-header">
                     <h2>Order #12345</h2>
                     <span>March 10, 2024</span>
@@ -142,13 +187,13 @@
                 </div>
 
                 <div class="actions">
-                    <button class="view-btn">View Details</button>
+                    <button class="view-btn" data-modal-target="#order-modal">View Details</button>
                     <button class="reorder-btn">Re-order</button>
                 </div>
             </div>
 
-            <!-- Add more order cards as needed -->
-            <div class="order-card">
+            <!-- Order Card 2 -->
+            <div class="order-card" data-order-id="12346">
                 <div class="order-header">
                     <h2>Order #12346</h2>
                     <span>February 28, 2024</span>
@@ -164,7 +209,7 @@
                 </div>
 
                 <div class="actions">
-                    <button class="view-btn">View Details</button>
+                    <button class="view-btn" data-modal-target="#order-modal">View Details</button>
                     <button class="reorder-btn">Re-order</button>
                 </div>
             </div>
