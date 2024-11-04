@@ -8,21 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using BanHang.Model;
 
-namespace BanHang.Areas.Admin.Controllers
+namespace MyStore.Areas.admin.Controllers
 {
     public class CategoriesController : Controller
     {
-        private HomePageEntities db = new HomePageEntities();
+        private masterEntities db = new masterEntities();
 
-        // GET: Admin/Categories
-        // GET: lấy dữ liệu từ bảng Category trong DB để hiển thị lên  
+        // GET: admin/Categories
         public ActionResult Index()
         {
             return View(db.Categories.ToList());
         }
 
-        // GET: Admin/Categories/Details/5
-        // Details: lấy chi tiết một bản ghi có CategoryID = id
+        // GET: admin/Categories/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,16 +35,14 @@ namespace BanHang.Areas.Admin.Controllers
             return View(category);
         }
 
-        // GET: Admin/Categories/Create
-        // Load form Create
-        //[HttpGet] là phương thức mặc định, nên không cần khai báo từ khóa
+
+        // GET: admin/Categories/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Categories/Create
-        // POST: lưu dữ liệu vào từ form Create vào DB
+        // POST: admin/Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -63,24 +59,22 @@ namespace BanHang.Areas.Admin.Controllers
             return View(category);
         }
 
-        // GET: Admin/Categories/Edit/5
-        // GET: lấy dữ liệu của một danh mục đã có sao cho CategoryID = id
+        // GET: admin/Categories/Edit/5
         public ActionResult Edit(int? id)
         {
-            return Details(id);
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
-            //Category category = db.Categories.Find(id);
-            //if (category == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //return View(category);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
         }
 
-        // POST: Admin/Categories/Edit/5
+        // POST: admin/Categories/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -96,23 +90,22 @@ namespace BanHang.Areas.Admin.Controllers
             return View(category);
         }
 
-        // GET: Admin/Categories/Delete/5
+        // GET: admin/Categories/Delete/5
         public ActionResult Delete(int? id)
         {
-            return Details(id);
-            //if (id == null)
-            //{
-            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            //}
-            //Category category = db.Categories.Find(id);
-            //if (category == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //return View(category);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+            return View(category);
         }
 
-        // POST: Admin/Categories/Delete/5
+        // POST: admin/Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

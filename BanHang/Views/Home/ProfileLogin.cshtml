@@ -201,7 +201,7 @@
         <section class="login-section">
             <div class="login-box">
                 <h2>Login to Your Account</h2>
-                <form action="https://www.google.com/" method="post">
+                <form action="../Home/Profile_Page" method="post">
                     <div class="input-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -213,14 +213,38 @@
                     </div>
 
                     <div class="actions">
-                        <button type="submit" class="btn-submit">Login</button>
+                        <a href="../Home/Profile_Page"><button class="btn-submit">Login</button></a>
+                        
                         <p><a href="../Home/PasswordReset">Forgot Password?</a></p>
                     </div>
                 </form>
             </div>
         </section>
     </main>
+    <script>
+        // Predefined credentials for demonstration purposes
+        const validUsername = "user123";
+        const validPassword = "password123";
 
+        function login() {
+            // Get input values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const loginMessage = document.getElementById("loginMessage");
+
+            // Validate credentials
+            if (username === validUsername && password === validPassword) {
+                loginMessage.style.color = "green";
+                loginMessage.textContent = "Login successful!";
+                // Redirect to another page or perform other actions
+                // window.location.href = "dashboard.html";
+            } else {
+                loginMessage.style.color = "red";
+                loginMessage.textContent = "Invalid username or password.";
+            }
+        }
+
+    </script>
     <script src="./assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
